@@ -1,5 +1,6 @@
-parseParameters(Defaults, callerVarargin, varargin)
-===================================================
+parseParameters
+===============
+**parseParameters(Defaults, callerVarargin, varargin)**
 
 Parses parameter name-value pairs quickly. Does not handle options.
 
@@ -47,7 +48,6 @@ See Also
 
 Notes
 -----
-
 In my tests this function is 9-20x faster than inputParser. To keep
 your programs responsive, use inputParser for functions called less
 than 1000 times and parseParameters for functions called less than
