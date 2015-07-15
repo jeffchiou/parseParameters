@@ -38,7 +38,7 @@ function varargout = parseParameters(Defaults,callerVarargin,varargin)
 %       Defaults struct fields were initialized. If expandStruct is false,
 %       returns a struct formatted like the Defaults struct.
 % 
-%   See also
+%   See Also
 %   --------
 %   inputParser
 %
