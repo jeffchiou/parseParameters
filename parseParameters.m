@@ -187,8 +187,8 @@ else
             Defaults.(defaultParamNames{match}) = callerVarargin{i+1};
         else
             throw( MException('PARSEPARAMETERS:badDefaultNames',...
-                ['Two default parameter names are identical, besides case.'
-                'Set case sensitivity to true in parseParameters']) );
+                ['Two default parameter names are identical, besides '...
+                'case. Set case sensitivity to true in parseParameters']));
         end        
     end
 end % of isCaseSensitive if-else
