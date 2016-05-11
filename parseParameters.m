@@ -77,6 +77,17 @@ function varargout = parseParameters(Defaults,callerVarargin,varargin)
 %   --------
 %   .. highlight:: matlab
 %
+%   Basic usage within a function::
+%
+%       function foo(varargin)
+%           Defaults.a = 'a';
+%           Defaults.b = 'b';
+%           [a,b] = parseParameters(Defaults,varargin);
+%           disp(['a: ' a ', b: ' b '.']);
+%       end
+%       >> foo('a','A')
+%       a: A, b: b.
+%
 %   Order of Defaults initialization matters. Case insensitive by default::
 %
 %       >> Defaults.x = 3.14159;
@@ -84,21 +95,6 @@ function varargout = parseParameters(Defaults,callerVarargin,varargin)
 %       >> [x,msg] = parseParameters(Defaults,{'MsG','bye','x',1.61803})
 %       x = 1.61803
 %       msg = 'bye'
-%   
-%   Usage within a function with two positional optional arguments::
-%
-%       function myFunction(x,varargin)
-%           ...
-%           % Your own positional option parsing code
-%           a = varargin{1}
-%           b = varargin{2}
-%           ...
-%           Defaults.c = 3;
-%           Defaults.d = 'd';
-%           Defaults.e = struct('e1',5);
-%           [c,d,e] = parseParameters(Defaults,varargin{3:end});
-%           ...
-%       end
 %
 %   Using case sensitivity and returning a structure::
 %
